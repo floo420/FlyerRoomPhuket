@@ -1,0 +1,47 @@
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+.activities section {
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.activities img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.activities a {
+    text-decoration: none;
+    color: #014f86;
+    font-weight: bold;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ff7f50;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff5722;
+}
