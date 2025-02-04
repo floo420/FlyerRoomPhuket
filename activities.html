@@ -3,38 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activities</title>
+    <title>Explore Phuket - Activities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="activities.css">
 </head>
 <body>
-    <!-- Back to Homepage Button -->
-    <a href="index.html" class="back-button">← Back to Homepage</a>
-    <header>
-        <h1>Activities in Phuket</h1>
-        <p>Explore the best of Phuket with these amazing activities!</p>
-    </header>
 
-    <main class="activities">
-        <section>
-            <h2>Island-Hopping Tour</h2>
-            <img src="IMG/island-hopping.jpg" alt="Island Hopping">
-            <p>Price: $50 per person</p>
-            <a href="https://goo.gl/maps/example" target="_blank">View on Google Maps</a>
-        </section>
+     <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Room Services</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#laundry">Laundry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-glow nav-contact" href="contact.html">Contact Us</a>
+                </li>                
+            </ul>
+        </div>
+    </div>
+</nav>
 
-        <section>
-            <h2>Snorkeling Adventure</h2>
-            <img src="IMG/snorkeling.jpg" alt="Snorkeling">
-            <p>Price: $40 per person</p>
-            <a href="https://goo.gl/maps/example" target="_blank">View on Google Maps</a>
-        </section>
 
-        <section>
-            <h2>Jetski Experience</h2>
-            <img src="IMG/jetski.jpg" alt="Jetski">
-            <p>Price: $60 per person</p>
-            <a href="https://goo.gl/maps/example" target="_blank">View on Google Maps</a>
-        </section>
-    </main>
+    <!-- Map Section -->
+    <section class="map-section">
+        <img src="IMG/Section1.jpg" alt="Map of Phuket" class="img-fluid map-img">
+    </section>
+
+    <!-- Bars Section -->
+    <section class="info-section" id="bars">
+        <div class="container text-center">
+            <h2 class="section-title">Top Bars in the Area 🍹</h2>
+            <p>Discover the most vibrant bars around! Perfect for chilling or partying:</p>
+            <ul class="list-unstyled bars-list">
+                <li>1. Sunset Lounge – Amazing sea view cocktails</li>
+                <li>2. The Rooftop Vibe – Chill beats with stunning views</li>
+                <li>3. Beachside Breeze – Fresh drinks by the beach</li>
+                <li>4. Jungle Bar – A hidden tropical gem</li>
+                <li>5. Night Pulse – High-energy dance floor</li>
+                <li>6. Zen Bar – Relaxing atmosphere with cool vibes</li>
+                <li>7. Horizon Bar – Signature drinks with a twist</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Cannabis Shops Section -->
+    <section class="info-section" id="cannabis">
+        <div class="container text-center">
+            <h2 class="section-title">Cannabis Shops 🌿</h2>
+            <p>Explore legal cannabis shops offering top-quality products:</p>
+            <div class="row justify-content-center">
+                <a href="https://maps.app.goo.gl/6DaArPAuKapjJE1CA" target="_blank" class="col-md-4 shop-card">
+                    1. 7Even Cannabis
+                </a>
+            
+                <a href="https://www.google.com/maps/place/Herbal+Haven" target="_blank" class="col-md-4 shop-card">
+                    2. Herbal Haven
+                </a>
+            
+                <a href="https://www.google.com/maps/place/Leaf+Lounge+Boutique" target="_blank" class="col-md-4 shop-card">
+                    3. Leaf Lounge Boutique
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Beaches Section -->
+    <section class="beach-section" id="beaches">
+        <div class="container text-center">
+            <h2 class="section-title">Nearby Beaches 🌊</h2>
+            <p>Sun, sand, and sea – find your perfect beach spot!</p>
+            <div class="beach-grid">
+                <div class="beach-card">
+                    <img src="IMG/beach1.jpg" alt="Surin Beach">
+                    <h3>Surin Beach</h3>
+                    <p>Vibrant, lively, and packed with fun activities.</p>
+                </div>
+                <div class="beach-card">
+                    <img src="IMG/beach2.jpg" alt="Bangtao Beach">
+                    <h3>Bangtao Beach</h3>
+                    <p>Perfect for surfers and sunsets lovers.</p>
+                </div>
+                <div class="beach-card">
+                    <img src="IMG/beach3.jpg" alt="Banana Beach">
+                    <h3>Banana Beach</h3>
+                    <p>Secluded paradise with crystal clear water.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section class="info-section" id="restaurants">
+        <div class="container text-center">
+            <h2 class="section-title">Nearby Restaurants 🍽️</h2>
+            <p>Delicious food awaits just around the corner:</p>
+            <ul class="list-unstyled restaurant-list">
+                <a href="https://www.google.com/maps/place/YourLocationLink" target="_blank" class="restaurant-link">
+                    🌴🍽️ <strong>Local Thai Beach Bites</strong> – Fresh seafood, vibrant Thai dishes & tasty European favorites
+                    <span class="map-icon">📍</span>
+                </a>
+                                <li>🍜 Thai Spice Kitchen – Authentic local flavors</li>
+                <li>🍕 Pizza by the Beach – Fresh wood-fired pizzas</li>
+                <li>🥗 Green Garden Café – Healthy vegan options</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Room Services | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -8,12 +8,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Room Services</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#laundry">Laundry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-glow nav-contact" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
     <!-- Welcome Section -->
     <section class="banner" id="welcome">
         <div class="banner-content text-center">
             <h1>Welcome to Your Room Services</h1>
             <p>Relax, unwind, and enjoy a hassle-free stay. We’re here to make your visit as comfortable and enjoyable as possible with dedicated services at your fingertips.</p>
-            <a href="#laundry" class="btn btn-primary">Learn More</a>
+            <a href="#laundry" class="btn btn-glow">Learn More</a>
         </div>
     </section>
 
@@ -21,25 +49,24 @@
     <section id="laundry" class="d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="IMG/Section2.jpg" alt="Laundry Service" class="img-fluid rounded">
+                <div class="col-md-6 order-md-2">
+                    <img src="IMG/Section2.jpg" alt="Laundry Service" class="img-fluid rounded shadow-lg">
                 </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center">
-                    <h1>Laundry Service</h1>
+                <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-center">
+                    <h1 class="section-title">Laundry Service</h1>
                     <p>Laundry is picked up from your room, washed, and delivered back. Pricing is determined by weight (per kg). You can also choose ironing services!</p>
-                    <button id="laundryBtn" class="btn btn-primary mt-3">Contact Us</button>
+                    <button id="laundryBtn" class="btn btn-glow mt-3">Contact Us</button>
                 </div>
             </div>
         </div>
     </section>
     
-
     <!-- Activities Section -->
     <section class="banner" id="activities">
         <div class="banner-content text-center">
-            <h1>Discover the Best of Phuket and beyond</h1>
+            <h1>Discover the Best of Phuket</h1>
             <p>Experience the beauty of Phuket and its surroundings! From island-hopping adventures to cultural explorations and thrilling water sports, we’ve got something for everyone to enjoy.</p>
-            <a href="activities.html" class="btn btn-primary">Check Activities and Book Now</a>
+            <a href="activities.html" class="btn btn-glow">Check Activities</a>
         </div>
     </section>
 
@@ -50,16 +77,26 @@
 
     <!-- Pop-Up Modal -->
 <div id="laundryModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content animated-pop">
         <span class="close">&times;</span>
-        <h2>Contact Us for Laundry</h2>
-        <p>Reach us on:</p>
-        <ul>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/123456789" target="_blank">+66 99 483 8074</a></li>
-            <li><strong>Line:</strong> Add us at @laundryservice</li>
-        </ul>
+        <h2>🧺 Contact Us for Laundry</h2>
+        <p class="modal-description">We’re here to keep your clothes fresh and clean. Reach us anytime!</p>
+        
+        <div class="contact-options">
+            <div class="contact-card">
+                <img src="IMG/whatsapp-icon.png" alt="WhatsApp" class="contact-icon">
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/123456789" target="_blank">+66 99 483 8074</a></p>
+            </div>
+            <div class="contact-card">
+                <img src="IMG/line-icon.png" alt="Line" class="contact-icon">
+                <p><strong>Line:</strong> Add us at <strong>@laundryservice</strong></p>
+            </div>
+        </div>
+
+        <button class="btn btn-glow modal-btn" onclick="window.location.href='https://wa.me/123456789'">Message Now</button>
     </div>
 </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

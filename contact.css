@@ -1,0 +1,236 @@
+/* Navbar Custom Styles */
+.navbar-custom {
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffe9d6 !important;
+    transform: scale(1.1);
+}
+
+/* Contact Button in Navbar */
+.nav-contact {
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+/* Sticky Navbar on Scroll */
+.navbar-custom.scrolled {
+    background: linear-gradient(45deg, #ff4081, #ff7f50);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background: linear-gradient(45deg, #ff7f50, #ff4081);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+}
+
+
+/* Contact Hero Section */
+.contact-hero {
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+    color: white;
+    padding: 70px 20px; /* Added more padding */
+    text-align: center;
+    margin-top: 60px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background: #f4f8fb;
+    padding: 60px 20px; /* More padding */
+}
+
+.contact-form {
+    background: white;
+    padding: 40px; /* Increased padding */
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-control {
+    border-radius: 12px;
+    padding: 18px; /* Larger input fields */
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    transition: border 0.3s ease;
+    margin-bottom: 20px; /* Added spacing between fields */
+}
+
+.contact-form .form-control:focus {
+    border: 1px solid #ff7f50;
+    box-shadow: 0 0 12px rgba(255, 127, 80, 0.5);
+}
+
+.contact-form .btn-glow {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+}
+
+/* Quick Contact Section */
+.quick-contact {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    padding: 60px 20px; /* More padding */
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quick-contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px; /* More space below heading */
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+/* Contact Cards Layout */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* More space between cards */
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Contact Card Design */
+.contact-card {
+    background: white;
+    padding: 30px; /* Added more padding */
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid #ff7f50;
+    box-shadow: 0 8px 30px rgba(255, 127, 80, 0.3);
+}
+
+/* Contact Icons */
+.contact-icon {
+    width: 60px; /* Slightly larger icons */
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+/* Contact Info Text */
+.contact-card p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.contact-card a {
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #ff7f50;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-card {
+        width: 90%;
+    }
+
+    .contact-icons {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 50px 15px;
+    }
+
+    .quick-contact {
+        margin: 20px 10px;
+        padding: 40px 15px;
+    }
+}
