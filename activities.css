@@ -1,9 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove margin from the body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Navbar Custom Styles */
 .navbar-custom {
     background: linear-gradient(45deg, #ff7f50, #ff4081);
     padding: 15px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: none; /* Remove bottom border if any */
 }
 
 .navbar-brand {
@@ -88,24 +105,75 @@
 /* Map Section */
 .map-section {
     position: relative;
-    height: 50vh;
     overflow: hidden;
+    padding: 0;
+    margin: 0; /* Ensure no margin */
+    line-height: 0;
 }
 
+/* Adjust for the fixed navbar */
 .map-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    margin-top: -10px; /* Slightly pull up to eliminate any gap */
+    margin-bottom: -80px; /* Pulls the image slightly up to close any gap */
     border-radius: 0 0 20px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Scroll Indicator */
+.scroll-indicator {
+    text-align: center;
+    margin: 0;              /* Remove all margins */
+    padding: 0;             /* Remove all padding */
+    color: #ff4081;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in-out;
+    cursor: pointer;
+    line-height: 1.2;
+    background-color: transparent; /* Ensure there's no hidden background */
+}
+
+/* Adjust the Arrow */
+.scroll-indicator .arrow {
+    display: block;
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+    margin-bottom: -20px;   /* Pull it closer to eliminate the gap */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 /* Info Sections (Bars, Cannabis, Restaurants) */
 .info-section {
     background: linear-gradient(to right, #ffecd2, #fcb69f);
     padding: 50px 20px;
     border-radius: 20px;
-    margin: 20px;
+    margin: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -180,29 +248,30 @@
 
 /* Clickable Restaurant Link */
 .restaurant-link {
-    display: inline-flex;
-    align-items: center;
+    display: block;
     text-decoration: none;
-    color: #333;
+    background: linear-gradient(90deg, #fff8f0, #ffe9d6);
+    padding: 12px 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    position: relative;
+    color: #333;
     transition: all 0.3s ease;
-    padding: 5px;
-    border-radius: 8px;
-    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    max-width: 90%;
+    text-align: left;
 }
 
-/* Hover Effect */
 .restaurant-link:hover {
     background: #ffecd2;
+    transform: scale(1.03);
     color: #ff4081;
-    transform: scale(1.02);
     box-shadow: 0 4px 12px rgba(255, 127, 80, 0.4);
 }
 
 /* Animated Map Icon */
 .map-icon {
-    margin-left: 8px;
+    float: right;
     animation: bounce 1.5s infinite;
     transition: transform 0.3s ease;
 }
@@ -232,7 +301,55 @@
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    /* Fix for Map Image */
+    .map-img {
+        width: 100%;
+        height: auto;  
+        max-height: 90vh;             /* Maintain aspect ratio */
+        object-fit: contain;        /* Ensures the full image is visible */
+        display: block;
+        margin: 0 auto;             /* Center the image */
+        padding: 0;                 /* Remove padding */
+        border-radius: 0 0 15px 15px;
+    }
+
+    .map-section {
+        overflow-x: hidden;         /* Prevent horizontal scrolling */
+        padding: 0;
+        margin: 0;
+        padding-top: 45px; /* Adjust based on navbar height */
+        padding-bottom: 5px;
+    }
+
+    /* Fix for Scroll Indicator */
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* Restaurant Section Fix */
+    .restaurant-link {
+        display: block;          /* Make it full-width for better layout */
+        font-size: 1rem;         /* Maintain clear readability */
+        padding: 10px;           /* Add padding for spacing */
+        margin: 10px auto;       /* Center alignment */
+        max-width: 90%;          /* Restrict width for better responsiveness */
+        background: linear-gradient(90deg, #fff8f0, #ffe9d6); /* Subtle gradient */
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .restaurant-list li {
+        font-size: 1rem;         /* Consistent size */
+        margin: 5px 0;           /* Spacing between items */
+        text-align: left;        /* Left align for a cleaner look */
+    }
+
+    /* Adjust Section Padding */
     .info-section, .beach-section {
-        padding: 30px 15px;
+        padding: 20px 10px;      /* Less padding on smaller screens */
     }
 }

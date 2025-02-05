@@ -34,3 +34,10 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('scrolled');
     }
 });
+
+document.querySelector('.scroll-indicator').addEventListener('click', function () {
+    window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+});
