@@ -23,6 +23,7 @@ body {
     border-bottom: none; /* Remove bottom border if any */
 }
 
+
 .navbar-brand {
     font-weight: bold;
     color: white !important;
@@ -190,6 +191,43 @@ body {
     font-weight: bold;
 }
 
+/* Clickable Bar Link (same style as restaurants) */
+.bar-link {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(90deg, #fff8f0, #ffe9d6);
+    padding: 12px 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    max-width: 90%;
+    text-align: left;
+}
+
+/* Hover Effect */
+.bar-link:hover {
+    background: #ffecd2;
+    transform: scale(1.03);
+    color: #ff4081;
+    box-shadow: 0 4px 12px rgba(255, 127, 80, 0.4);
+}
+
+/* Animated Map Icon */
+.map-icon {
+    float: right;
+    animation: bounce 1.5s infinite;
+    transition: transform 0.3s ease;
+}
+
+/* Icon Scaling on Hover */
+.bar-link:hover .map-icon {
+    transform: scale(1.2);
+}
+
+
 /* Cannabis Shops */
 .shop-card {
     background: white;
@@ -215,12 +253,14 @@ body {
     color: white;
     text-align: center;
     border-radius: 20px;
-    margin: 20px 0;
+    margin: 0;
+    padding-bottom: 60px;
 }
 
 .beach-grid {
     display: flex;
     justify-content: center;
+    align-items: stretch;  /* Ensures all cards stretch to the same height */
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -231,12 +271,18 @@ body {
     padding: 15px;
     border-radius: 15px;
     width: 300px;
+    height: 330px;  /* Set a fixed height for consistency */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures equal spacing */
 }
 
 .beach-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .beach-card img {
@@ -244,6 +290,23 @@ body {
     border-radius: 10px;
     height: 200px;
     object-fit: cover;
+}
+
+.beach-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.beach-card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+/* Beach Card Text */
+.beach-card p {
+    flex-grow: 1;  /* Ensures equal space for text */
+    font-size: 1rem;
+    padding: 0 10px;
 }
 
 /* Clickable Restaurant Link */
