@@ -1,0 +1,483 @@
+/* ============================
+   🌟 GENERAL STYLES
+============================ */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7f50, #ff4081);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   🔥 NAVBAR (Same as Index)
+============================ */
+.navbar-custom {
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffe9d6 !important;
+    transform: scale(1.1);
+}
+
+/* Contact Button in Navbar */
+.nav-contact {
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+/* Sticky Navbar on Scroll */
+.navbar-custom.scrolled {
+    background: linear-gradient(45deg, #ff4081, #ff7f50);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background: linear-gradient(45deg, #ff7f50, #ff4081);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+}
+
+
+/* Vibrant Button */
+.btn-glow {
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 127, 80, 0.4);
+}
+
+.btn-glow:hover {
+    background: linear-gradient(45deg, #ff4081, #ff7f50);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(255, 64, 129, 0.5);
+}
+
+/* ============================
+   🎬 HERO SECTION (Main Banner)
+============================ */
+.hero {
+    background: url('IMG/jamesbond_hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-subtext {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* ============================
+   🚤 TOUR HIGHLIGHTS SECTION
+============================ */
+.tour-highlights {
+    text-align: center;
+    padding: 10px 20px; /* Increased padding to move it up */
+    margin-top: -100px; /* Moves section closer to the hero */
+    margin-bottom: 100px; /* Ensures space before next section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the section */
+    justify-content: center;
+}
+
+.highlight-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.highlight img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ============================
+   📅 TOUR ITINERARY SECTION
+============================ */
+.itinerary {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Itinerary Columns */
+.itinerary-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Column */
+.itinerary-column {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    min-width: 300px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Titles for Each Column */
+.itinerary-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 100%;
+}
+
+/* Individual Event */
+.event {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Highlighted Events */
+.highlight-event {
+    background: rgba(255, 255, 255, 0.4);
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.event:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Event Icon */
+.event-icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .itinerary-container {
+        flex-direction: column;
+    }
+
+    .itinerary-column {
+        width: 100%;
+    }
+}
+
+/* ============================
+   💰 PRICE CARD - FIXED ALIGNMENT
+============================ */
+.price-card {
+    background: none;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for fun */
+.price-card:hover {
+    transform: scale(1.05);
+}
+
+.price-text {
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+.price-highlight {
+    color: #ffea00; /* Bright Yellow for Price */
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .itinerary-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-card {
+        font-size: 1.2rem;
+    }
+
+    .price-text {
+        font-size: 1.1rem;
+    }
+
+    .price-highlight {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================
+   🚤 PRIVATE LONGTAIL BOAT SECTION (COMPACT)
+============================ */
+.private-boat {
+    background: linear-gradient(135deg, #ff80a1, #ff4e50);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.private-boat-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+/* Image Styling */
+.private-boat-image img {
+    width: 55%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Content */
+.private-boat-text {
+    color: white;
+    text-align: left;
+    flex: 1;
+    padding-left: 15px;
+}
+
+/* Smaller Titles */
+.private-boat-text h2 {
+    font-size: 1.5rem; /* Smaller */
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Smaller Subtitle */
+.private-subtext {
+    font-size: 1rem; /* Smaller */
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+/* Smaller Pricing List */
+.private-price-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem; /* Smaller */
+}
+
+/* Smaller List Items */
+.private-price-list li {
+    margin: 3px 0;
+    font-weight: bold;
+}
+
+/* Price Highlight */
+.price-highlight {
+    color: #ffea00;
+    font-size: 1.2rem; /* Smaller */
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .private-boat-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .private-boat-image img {
+        width: 75%;
+    }
+
+    .private-boat-text {
+        padding-left: 0;
+        margin-top: 12px;
+    }
+}
+
+
+
+/* ============================
+   📩 BOOKING SECTION
+============================ */
+.booking {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff4081, #ff7f50); /* Adjusted color */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(255, 64, 129, 0.3);
+}
+
+.booking h2 {
+    margin-bottom: 15px;
+}
+
+.btn-glow {
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 127, 80, 0.4);
+}
+
+.btn-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(255, 64, 129, 0.5);
+}
+
+/* ============================
+   📌 FLOATING BOOKING BUTTON
+============================ */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff7f50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ============================
+   📌 FOOTER
+============================ */
+footer {
+    background-color: #ff4081;
+    color: white;
+    padding: 15px 0;
+}
+
+/* ============================
+   ✨ ANIMATIONS
+============================ */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    /* Footer */
+    footer {
+        padding: 15px 10px;
+        font-size: 0.8rem; /* Slightly smaller footer text */
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        font-size: 0.9rem;
+    }
+}

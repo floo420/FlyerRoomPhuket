@@ -70,3 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById(this.getAttribute('href').substring(1))
+            .scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
