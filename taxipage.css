@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7f50, #ff4081);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Taxi Service Section */
+.taxi-service {
+    padding: 120px 20px; /* Padding for the overall section */
+    margin-top: 50px; /* Add space above only */
+    text-align: center;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    color: white;
+}
+
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.taxi-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.taxi-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.taxi-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff7f50, #ff4081);
+    color: white;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-contact {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff4081, #ff7f50);
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.4);
+}
+
+.btn-contact:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff7f50, #ff4081);
+}
+
+/* Footer */
+footer {
+    background-color: #ff4081;
+    color: white;
+    padding: 15px 0;
+}
